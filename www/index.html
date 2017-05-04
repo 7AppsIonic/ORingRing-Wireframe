@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+        <script src="js/ng-cordova.min.js"></script>
+        <script src="cordova.js"></script>
+        <script src="js/app.js"></script>
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+
+    <ion-pane>
+      <ion-header-bar class="bar-assertive">
+        <h1 class="title">QRingRing</h1>
+      </ion-header-bar>
+      <ion-content ng-controller="AppController"><p><br></p><p>
+      <div align="center"><img src="img/ringringlogo.png" width="30%"></div></p>
+      <div align="center"><ion-item>
+  <ion-input type="name"></ion-input><form ng-submit="generateBarcode()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label"><div align="left">Name</div></span>
+          <input type="text" ng-model="barcodeGenerator()">
+        </label>
+        <label class="item item-input">
+          <span class="input-label"><div align="left">Email Address</div></span>
+          <input type="text" ng-model="barcodeGenerator()">
+        </label>
+        <label class="item item-input">
+          <span class="input-label"><div align="left">Phone Number</div></</span>
+          <input type="text" ng-model="barcodeGenerator()">
+        </label>
+        <label class="item">
+          <button class="button button-block- button-positive" ng-click="barcodeGenerator()">&nbsp;Generate QR Code&nbsp;</button>
+        </label>
+      </div>
+    </form>
+</ion-item><p></p><h4>Or</h4><p>
+        <div align="center"><button class="button button-block-round button-assertive" ng-click="scanBarcode()">&nbsp;&nbsp;&nbsp;&nbsp;Scan QR Code&nbsp;&nbsp;&nbsp;&nbsp;</button></div>
+      </p></div></ion-content>
+    </ion-pane>
+  </body>
+</html>
